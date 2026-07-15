@@ -1,0 +1,44 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+lerna-debug.log*
+
+# Dependencies and builds
+node_modules
+dist
+dist-ssr
+coverage
+.vite
+.cache
+.tmp
+.eslintcache
+
+# Local configuration and secrets
+.env
+.env.*
+!.env.example
+*.local
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.fleet
+.DS_Store
+Thumbs.db
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Local assistant files
+.agents/
+.codex/
+
+# Local browser QA artifacts
+.playwright-mcp/
+playwright-report/
+test-results/
+weekflow-stage*.png

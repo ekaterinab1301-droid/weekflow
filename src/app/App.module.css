@@ -1,0 +1,60 @@
+.app {
+  min-height: 100svh;
+  background: var(--color-background);
+}
+
+.workspace {
+  width: min(100%, 88rem);
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(18rem, 20rem);
+  grid-template-areas:
+    'week quick'
+    'week today';
+  align-items: start;
+  gap: var(--space-6);
+  margin: 0 auto;
+  padding: var(--space-6);
+}
+
+.weekZone,
+.quickAddZone,
+.todayZone {
+  min-width: 0;
+}
+
+.weekZone {
+  grid-area: week;
+}
+
+.quickAddZone {
+  grid-area: quick;
+}
+
+.todayZone {
+  grid-area: today;
+}
+
+@media (max-width: 1080px) and (min-width: 821px) {
+  .workspace {
+    grid-template-columns: minmax(0, 1fr) 17rem;
+  }
+}
+
+@media (max-width: 820px) {
+  .workspace {
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-areas:
+      'quick'
+      'week'
+      'today';
+    gap: var(--space-4);
+    padding: var(--space-3);
+  }
+}
+
+@media (max-width: 390px) {
+  .workspace {
+    gap: var(--space-3);
+    padding: var(--space-2);
+  }
+}

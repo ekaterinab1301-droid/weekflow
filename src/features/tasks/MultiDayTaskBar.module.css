@@ -1,0 +1,79 @@
+.bar {
+  z-index: 2;
+  min-width: 0;
+  height: 2rem;
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  margin: 0 var(--space-1);
+  padding: 0 var(--space-2) 0 0;
+  overflow: hidden;
+  border: 1px solid color-mix(in srgb, var(--project-color) 55%, white);
+  border-radius: var(--radius-sm);
+  background: var(--project-tint);
+  color: var(--color-text-primary);
+}
+
+.continues {
+  margin-right: 0;
+  border-right: 0;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.projectLine {
+  width: 0.25rem;
+  align-self: stretch;
+  flex: 0 0 auto;
+  background: var(--project-color);
+}
+
+.content {
+  min-width: 0;
+  display: flex;
+  flex: 1;
+  align-items: baseline;
+  gap: var(--space-2);
+  overflow: hidden;
+}
+
+.title,
+.project {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.title {
+  color: var(--color-text-primary);
+  font-size: 0.75rem;
+  font-weight: 650;
+}
+
+.project {
+  color: var(--color-text-secondary);
+  font-size: 0.6875rem;
+}
+
+.arrow {
+  flex: 0 0 auto;
+  color: var(--project-color);
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+@media (max-width: 600px) {
+  .bar {
+    height: 1.75rem;
+    gap: var(--space-1);
+    padding-right: var(--space-1);
+  }
+
+  .project {
+    display: none;
+  }
+
+  .title {
+    font-size: 0.6875rem;
+  }
+}
